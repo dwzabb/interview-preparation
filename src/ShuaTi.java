@@ -23,20 +23,17 @@ class Directory {
 public class ShuaTi {
 
 	public static void main(String[] args) {
-		int[] nums = {7, 2, 7, 2, 0};
-		RangeSumQueryMutable rq = new RangeSumQueryMutable(nums);
-		rq.update(4,6);
-		rq.update(0,2);
-		rq.update(0,9);
-		rq.sumRange(4,4);
-		//update(3,8),sumRange(0,4),update(4,1),sumRange(0,3),sumRange(0,4),update(0,4)
-		/*
+		testRangeSumQuery2DMutable();
+	}
+	
+	public static void testRangeSumQuery2DMutable() {
 		int[][] matrix = {{3,0,1,4,2},{5,6,3,2,1},{1,2,0,1,5},{4,1,0,1,7},{1,0,3,0,5}};
-				//sumRegion(2,1,4,3),update(3,2,2,sumRegion(2,1,4,3)
-		NumMatrix nm = new NumMatrix(matrix);
-		nm.sumRegion(2, 1, 4, 3);
-		nm.update(3, 2, 2);
-		nm.sumRegion(2, 1, 4, 3);*/
+		RangeSumQuery2DMutable test = new RangeSumQuery2DMutable(matrix);
+		test.printTree();
+		test.sumRegion(2,1,4,3);
+		test.update(3,2,2);
+		test.printTree();
+		test.sumRegion(2,1,4,3);
 	}
 	
 	public static String minWindow(String s, String t) {
