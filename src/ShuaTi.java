@@ -23,7 +23,13 @@ class Directory {
 public class ShuaTi {
 
 	public static void main(String[] args) {
-		testRangeSumQuery2DMutable();
+		testShortestDistanceFromAllBuildings();
+	}
+	
+	public static void testShortestDistanceFromAllBuildings() {
+		ShortestDistanceFromAllBuildings test = new ShortestDistanceFromAllBuildings();
+		int[][] grid = {{1,0,2,0,1},{0,0,0,0,0},{0,0,1,0,0}};
+		test.shortestDistance(grid);
 	}
 	
 	public static void testRangeSumQuery2DMutable() {
